@@ -1,0 +1,19 @@
+{
+    "cookieSecret":"",
+    "facebook":{
+        "app_id":"1916094698697767",
+        "app_secret":"990d423ed298727ecc38d14b6f16acdf",
+        "callback":"http://localhost:8080/auth/facebook/callback"
+    },
+    "twitter":{
+        "consumer_key":"",
+        "consumer_secret":"",
+        "callback":"http://localhost:3000/auth/twitter/callback"
+    },
+    "mongo":{
+        "development":{
+            "connectionString":"mongodb://localhost/foo"
+        },
+        "production":{}
+    }
+}

@@ -29,7 +29,7 @@
     </div>
     <div v-else>
       There are no recipes..Lets add one now <br /><br />
-      <router-link :to="{ name: 'NewRecipe'}" class="add_recipe_link">Add addRecipe</router-link>
+      <router-link :to="{ name: 'NewRecipe'}" class="add_recipe_link">Add Recipe</router-link>
     </div>
   </div>
 </template>
@@ -52,8 +52,6 @@ export default {
       this.recipes = response.data.recipes
     },
     async deleteRecipe (id) {
-      console.log('deleting recipe front end')
-      console.log(id)
       await RecipesService.deleteRecipe(id)
       this.$router.push({name: 'Recipes'})
     }

@@ -11,6 +11,15 @@ db.once("open", function(callback){
   console.log("Connection Succeeded");
 })
 
+/**
+features to add:
+  - full recipe model
+  - user accounts
+  - filters
+    - will require tagging
+  - ratings
+**/
+
 // STARTING MONGO DB
 // cd ~/mongo
 // sudo ./bin/mongod
@@ -82,7 +91,7 @@ app.get('/recipes/edit/:id', (req, res) => {
 })
 
 app.delete('/recipes/:id', (req, res) => {
-  
+
   Recipe.remove({
     _id: req.params.id
   }, function(err, recipe){
